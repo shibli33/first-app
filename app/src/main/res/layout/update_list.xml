@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="400dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+
+            android:text="Update Sample Quantity"
+            android:textColor="@color/white_greyish"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailsStatus"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="3dp"
+        android:layout_below="@id/lin1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_received_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="Quantity"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+
+            android:padding="5dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_below="@+id/detailsStatus"
+        android:id="@+id/error_message"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="left|center"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:visibility="gone"
+        android:textColor="#DA1111"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/saveCancel"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/error_message"
+        android:layout_margin="3dp"
+        android:layout_marginBottom="@dimen/dimen_2dp">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="Cancel"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/teal"
+            android:text="Update"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
